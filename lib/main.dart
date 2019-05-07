@@ -9,10 +9,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Lomitos Danesa',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      
+      // home: StoreHomePage(title: 'lomitos danesa'),
+       home: Splash(),
+    );
+  }
+}
+class Splash extends StatefulWidget {
+  @override
+  _SplashState createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Text("Almurzo Familiar",style: TextStyle(fontSize: 25.0,color: Colors.white),)
+          ],
+        ),
       ),
-      home: StoreHomePage(title: 'lomitos danesa'),
+      
     );
   }
 }
